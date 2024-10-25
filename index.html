@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Mugo's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .project-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-button.active {
+            background-color: red; /* Active tab color */
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold">Mark <span style="color: red;">Mugo</span></div>
+            <div class="flex justify-start gap-10">
+                <a href="https://www.linkedin.com/in/mark-mugo-4b04361a7/" target="_blank" class="text-red-600 hover:text-red-800">LinkedIn</a>
+                <a href="https://github.com/MarkB-Mugoh" target="_blank" class="text-red-600 hover:text-red-800">GitHub</a>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-red-600">Home</a>
+                <a href="#about" class="hover:text-red-600">About</a>
+                <a href="#projects" class="hover:text-red-600">Projects</a>
+                <a href="#skills" class="hover:text-red-600">Skills</a>
+                <a href="#contact" class="hover:text-red-600">Contact</a>
+                <a href="#contact" class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">Hire Me</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-900 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <nav class="px-6 py-4">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#projects" class="block py-2">Projects</a>
+            <a href="#skills" class="block py-2">Skills</a>
+            <a href="#contact" class="block py-2">Contact</a>
+            <a href="#contact" class="block py-2 bg-red-600 text-white rounded">Hire Me</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center">
+        <div class="w-full md:w-2/3 mb-6 md:mb-0">
+            <img src="mark.jpg" alt="Mark Mugo" class="w-full md:w-2/3 h-2/3 rounded-lg shadow-lg mix-blend-multiply">
+        </div>
+        <div class="w-full md:w-1/2 mt-6 md:mt-0 md:ml-6">
+            <h1 class="text-4xl font-bold">Hi, I'm Mark Mugo, a Web Developer.</h1>
+            <p class="mt-4 text-lg">I specialize in Laravel, Django, Shopify, and WordPress plugin development. Passionate about building high-quality, efficient web solutions, I strive to create seamless online experiences.</p>
+            <a href="#contact" class="mt-6 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <p class="mt-4 text-lg text-center">Hello! I’m Mark Mugo, a passionate web developer with over 4 years of experience in creating dynamic and engaging web solutions. My expertise spans across a variety of platforms, including Laravel, Django, Shopify, and WordPress, enabling me to build everything from robust eCommerce platforms to custom plugins and corporate websites. <br>
+
+                Throughout my career, I have successfully managed and contributed to projects that not only meet but exceed client expectations. I pride myself on my ability to understand the unique needs of each project and deliver top-notch solutions that drive results. My technical proficiency in PHP, Laravel, Wordpress, Shopify, Django, Appsheet Typescript, and Node.js, coupled with strong database management skills, allows me to design and develop complex systems that are efficient, scalable, and tailored to the specific requirements of my clients.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center">Technical Skills</h2>
+            <div class="flex flex-wrap justify-center mt-6">
+                
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-4">
+                    <img src="Laravel.png" alt="Laravel" class="mx-auto h-16 mix-blend-multiply">
+                    <p class="mt-2 text-center">Laravel</p>
+                </div>
+
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-4">
+                    <img src="django.jpg" alt="Django" class="mx-auto h-16 mix-blend-multiply">
+                    <p class="mt-2 text-center">Django</p>
+                </div>
+
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-4">
+                    <img src="wordpress.jpg" alt="WordPress" class="mx-auto h-16 mix-blend-multiply">
+                    <p class="mt-2 text-center">WordPress</p>
+                </div>
+
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-4">
+                    <img src="shopify.jpg" alt="Shopify" class="mx-auto h-16 mix-blend-multiply">
+                    <p class="mt-2 text-center">Shopify</p>
+                </div>
+
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-4">
+                    <img src="node.png" alt="node" class="mx-auto h-16 mix-blend-multiply">
+                    <p class="mt-2 text-center">Node JS</p>
+                </div>
+
+                <div class="w-1/2 md:w-1/4 lg:w-1/6 p-4">
+                    <img src="app-sheet.png" alt="app-sheet" class="mx-auto h-16 mix-blend-multiply">
+                    <p class="mt-2 text-center">App Sheet</p>
+                </div>
+                <!-- Add more skill icons as needed -->
+            </div>
+            <div class="flex justify-center mt-8 space-x-4">
+                <a href="https://www.linkedin.com/in/mark-mugo-4b04361a7/" target="_blank" class="text-red-600 hover:text-red-800">LinkedIn</a>
+                <a href="https://github.com/MarkB-Mugoh" target="_blank" class="text-red-600 hover:text-red-800">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Achievements Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center">Achievements</h2>
+                <ul class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <li class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold">30+ Websites Designed</h3>
+                        <p class="mt-2">Successfully completed over 30 unique website designs for various clients.</p>
+                    </li>
+                    <li class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold">5 Years of Experience</h3>
+                        <p class="mt-2">Expertise in multiple frameworks including Laravel, Django, WordPress, and shopify.</p>
+                    </li>
+                    <li class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold">E-commerce Solutions</h3>
+                        <p class="mt-2">Developed complete e-commerce platforms that enhance user experience and drive sales.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+     <!-- Tabs Section -->
+     <section class="bg-gray-200 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold">My Work</h2>
+            <div class="mt-8">
+                
+                <div class="tab-content active" id="web-projects">
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="websites/fleekingz.png" alt="fleekingz" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">fleekingz</h3>
+                                <p>The ultimate men’s barbershop and lifestyle brand. Offering premium grooming services and unique products tailored for men, we’re dedicated to elevating your look and helping you embody boldness and class in every moment.</p>
+                                <div class="mt-4 flex justify-between">
+                                    <a href="https://fleekingz.com/" target="_blank" class="text-red-600 hover:underline hover:scale-105 transform">
+                                        Visit Site →
+                                    </a>                                  
+                                    <p class="text-red-600">Tech :Shopify</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="websites/ska_main.png" alt="s.k.a Solutions" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">S.K.A. Solutions</h3>
+                                <p>A premier tech company based in the Netherlands, Ska Solutions provides innovative solutions in technology, engineering, and logistics. Known for a commitment to quality and a results-driven approach, Ska Solutions excels in delivering seamless, efficient, and cutting-edge services for businesses</p>
+                                <div class="mt-4 flex justify-between">
+                                    <a href="https://skasolution.com/" target="_blank" class="text-red-600 hover:underline hover:scale-105 transform">
+                                        Visit Site →
+                                    </a>                                  
+                                    <p class="text-red-600">Tech : Wordpress</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="websites/ska_us.png" alt="ska_us" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">S.K.A. Solution (US)</h3>
+                                <p>Specializing in engineering and business consultancy, the U.S. branch is dedicated to delivering innovative solutions for industries and enterprises. We leverage our global expertise to provide clients with strategic guidance, streamlined engineering services, and data-driven insights to drive sustainable business success.</p>
+                                <div class="mt-4 flex justify-between">
+                                    <a href="https://skasolution.us/" target="_blank" class="text-red-600 hover:underline hover:scale-105 transform">
+                                        Visit Site →
+                                    </a>                                  
+                                    <p class="text-red-600">Tech :Wordpress</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="websites/rspace.png" alt="rspacemn" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">RSpace</h3>
+                                <p>Based in Minnesota and supported by state funding, RSPACEMN is dedicated to helping youth on probation reconnect with their communities. Through mentorship, support programs, and skill-building initiatives, we empower young people to embrace positive futures and reintegrate successfully into society.</p>
+                                <div class="mt-4 flex justify-between">
+                                    <a href="https://rspacemn.org/" target="_blank" class="text-red-600 hover:underline hover:scale-105 transform">
+                                        Visit Site →
+                                    </a>                                  
+                                    <p class="text-red-600">Tech : Laravel & Django</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="websites/sash.png" alt="sash" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Stay Ahead Stay Healthy</h3>
+                                <p>Stay Ahead, Stay Healthy stands for a way of life with a view to the future. We believe in “approaching life with a preventive view” to prevent health problems. As is often said: “Prevention is better than cure!
+                                    We strive to provide you with the knowledge and tools to take control of your own well-being.</p>
+                                <div class="mt-4 flex justify-between">
+                                    <a href="https://stayaheadstayhealthy.com/" target="_blank" class="text-red-600 hover:underline hover:scale-105 transform">
+                                        Visit Site →
+                                    </a>                                  
+                                    <p class="text-red-600">Tech : Wordpress</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="websites/taxi.png" alt="taxi" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Taxidienst010</h3>
+                                <p>Designed and developed a comprehensive taxi booking platform, streamlining the process for users to easily book rides tailored to their preferences. The platform features an intuitive interface and robust functionality, ensuring a seamless user experience. Additionally, I created a custom WordPress plugin to enhance the booking process, enabling real-time availability checks and personalized ride options. This solution aims to elevate customer satisfaction while providing a reliable transportation service.</p>
+                                <div class="mt-4 flex justify-between">
+                                    <a href="https://taxidienst010.nl/" target="_blank" class="text-red-600 hover:underline hover:scale-105 transform">
+                                        Visit Site →
+                                    </a>                                  
+                                    <p class="text-red-600">Tech : Wordpress</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <!-- Add more web project cards here -->
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-lg mt-8">
+                        <h2 class="text-xl font-semibold mb-4">Note:</h2>
+                        <p class="text-gray-700 mb-4">
+                            I would love to discuss my experience and more projects I have worked on. However, due to NDA agreements, I am unable to disclose specific details about some confidential projects.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Please feel free to get in touch with me to learn more about how I can help bring your ideas to life!
+                        </p>
+                        <a href="/#contact" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+                            Contact Me
+                        </a>
+                    </div>
+                    
+                </div>             
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="py-16" id="contact">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold">Get in Touch</h2>
+            <p class="mt-4">I’d love to hear from you! Feel free to reach out via email: <a href="mailto:kotlinphp@gmail.com" class="text-red-600 hover:underline">kotlinphp@gmail.com</a></p>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Mark Mugo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+        function showTab(tabId) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+                button.classList.add('bg-red-200');
+            });
+
+            // Show the selected tab content and mark the button as active
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
